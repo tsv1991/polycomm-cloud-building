@@ -1,0 +1,130 @@
+vgcreate ceph-db-0 /dev/sdx
+vgcreate ceph-db-1 /dev/sdy
+vgcreate ceph-db-2 /dev/sdz
+
+lvcreate -L 15GB -n db-0  ceph-db-0
+lvcreate -L 15GB -n db-1  ceph-db-0
+lvcreate -L 15GB -n db-2  ceph-db-0
+lvcreate -L 15GB -n db-3  ceph-db-0
+lvcreate -L 15GB -n db-4  ceph-db-0
+lvcreate -L 15GB -n db-5  ceph-db-0
+lvcreate -L 21GB -n db-6  ceph-db-1
+lvcreate -L 21GB -n db-7  ceph-db-1
+lvcreate -L 21GB -n db-8  ceph-db-1
+lvcreate -L 21GB -n db-9  ceph-db-1
+lvcreate -L 21GB -n db-10 ceph-db-1
+lvcreate -L 21GB -n db-11 ceph-db-1
+lvcreate -L 21GB -n db-12 ceph-db-1
+lvcreate -L 21GB -n db-13 ceph-db-2
+lvcreate -L 21GB -n db-14 ceph-db-2
+lvcreate -L 21GB -n db-15 ceph-db-2
+lvcreate -L 21GB -n db-16 ceph-db-2
+lvcreate -L 21GB -n db-17 ceph-db-2
+lvcreate -L 21GB -n db-18 ceph-db-2
+lvcreate -L 21GB -n db-19 ceph-db-2
+
+lvcreate -L 21GB -n db-20 ceph-db-0
+lvcreate -L 21GB -n db-21 ceph-db-0
+lvcreate -L 21GB -n db-22 ceph-db-0
+lvcreate -L 21GB -n db-23 ceph-db-0
+lvcreate -L 21GB -n db-24 ceph-db-0
+lvcreate -L 21GB -n db-25 ceph-db-0
+lvcreate -L 21GB -n db-26 ceph-db-1
+lvcreate -L 21GB -n db-27 ceph-db-1
+lvcreate -L 21GB -n db-28 ceph-db-1
+lvcreate -L 21GB -n db-29 ceph-db-1
+lvcreate -L 21GB -n db-30 ceph-db-1
+lvcreate -L 21GB -n db-31 ceph-db-1
+lvcreate -L 21GB -n db-32 ceph-db-1
+lvcreate -L 21GB -n db-33 ceph-db-2
+lvcreate -L 21GB -n db-34 ceph-db-2
+lvcreate -L 21GB -n db-35 ceph-db-2
+lvcreate -L 21GB -n db-36 ceph-db-2
+lvcreate -L 21GB -n db-37 ceph-db-2
+lvcreate -L 21GB -n db-38 ceph-db-2
+lvcreate -L 21GB -n db-39 ceph-db-2
+
+lvcreate -L 21GB -n db-40 ceph-db-0
+lvcreate -L 21GB -n db-41 ceph-db-0
+lvcreate -L 21GB -n db-42 ceph-db-0
+lvcreate -L 21GB -n db-43 ceph-db-0
+lvcreate -L 21GB -n db-44 ceph-db-0
+lvcreate -L 21GB -n db-45 ceph-db-0
+lvcreate -L 21GB -n db-46 ceph-db-1
+lvcreate -L 21GB -n db-47 ceph-db-1
+lvcreate -L 21GB -n db-48 ceph-db-1
+lvcreate -L 21GB -n db-49 ceph-db-1
+lvcreate -L 21GB -n db-50 ceph-db-1
+lvcreate -L 21GB -n db-51 ceph-db-1
+lvcreate -L 21GB -n db-52 ceph-db-1
+lvcreate -L 21GB -n db-53 ceph-db-2
+lvcreate -L 21GB -n db-54 ceph-db-2
+lvcreate -L 21GB -n db-55 ceph-db-2
+lvcreate -L 21GB -n db-56 ceph-db-2
+lvcreate -L 21GB -n db-57 ceph-db-2
+lvcreate -L 21GB -n db-58 ceph-db-2
+lvcreate -L 21GB -n db-59 ceph-db-2
+
+ceph-deploy osd create --data /dev/sdc --block-db ceph-db-0/db-0 ceph01
+ceph-deploy osd create --data /dev/sdd --block-db ceph-db-0/db-1 ceph01
+ceph-deploy osd create --data /dev/sde --block-db ceph-db-0/db-2 ceph01
+ceph-deploy osd create --data /dev/sdf --block-db ceph-db-0/db-3 ceph01
+ceph-deploy osd create --data /dev/sdg --block-db ceph-db-0/db-4 ceph01
+ceph-deploy osd create --data /dev/sdh --block-db ceph-db-0/db-5 ceph01
+ceph-deploy osd create --data /dev/sdi --block-db ceph-db-1/db-6 ceph01
+ceph-deploy osd create --data /dev/sdj --block-db ceph-db-1/db-7 ceph01
+ceph-deploy osd create --data /dev/sdk --block-db ceph-db-1/db-8 ceph01
+ceph-deploy osd create --data /dev/sdl --block-db ceph-db-1/db-9 ceph01
+ceph-deploy osd create --data /dev/sdm --block-db ceph-db-1/db-10 ceph01
+ceph-deploy osd create --data /dev/sdn --block-db ceph-db-1/db-11 ceph01
+ceph-deploy osd create --data /dev/sdo --block-db ceph-db-1/db-12 ceph01
+ceph-deploy osd create --data /dev/sdp --block-db ceph-db-2/db-13 ceph01
+ceph-deploy osd create --data /dev/sdq --block-db ceph-db-2/db-14 ceph01
+ceph-deploy osd create --data /dev/sdr --block-db ceph-db-2/db-15 ceph01
+ceph-deploy osd create --data /dev/sds --block-db ceph-db-2/db-16 ceph01
+ceph-deploy osd create --data /dev/sdt --block-db ceph-db-2/db-17 ceph01
+ceph-deploy osd create --data /dev/sdv --block-db ceph-db-2/db-18 ceph01
+ceph-deploy osd create --data /dev/sdw --block-db ceph-db-2/db-19 ceph01
+
+ceph-deploy osd create --data /dev/sdc --block-db ceph-db-0/db-20 ceph02
+ceph-deploy osd create --data /dev/sdd --block-db ceph-db-0/db-21 ceph02
+ceph-deploy osd create --data /dev/sde --block-db ceph-db-0/db-22 ceph02
+ceph-deploy osd create --data /dev/sdf --block-db ceph-db-0/db-23 ceph02
+ceph-deploy osd create --data /dev/sdg --block-db ceph-db-0/db-24 ceph02
+ceph-deploy osd create --data /dev/sdh --block-db ceph-db-0/db-25 ceph02
+ceph-deploy osd create --data /dev/sdi --block-db ceph-db-1/db-26 ceph02
+ceph-deploy osd create --data /dev/sdj --block-db ceph-db-1/db-27 ceph02
+ceph-deploy osd create --data /dev/sdk --block-db ceph-db-1/db-28 ceph02
+ceph-deploy osd create --data /dev/sdl --block-db ceph-db-1/db-29 ceph02
+ceph-deploy osd create --data /dev/sdm --block-db ceph-db-1/db-30 ceph02
+ceph-deploy osd create --data /dev/sdn --block-db ceph-db-1/db-31 ceph02
+ceph-deploy osd create --data /dev/sdo --block-db ceph-db-1/db-32 ceph02
+ceph-deploy osd create --data /dev/sdp --block-db ceph-db-2/db-33 ceph02
+ceph-deploy osd create --data /dev/sdq --block-db ceph-db-2/db-34 ceph02
+ceph-deploy osd create --data /dev/sdr --block-db ceph-db-2/db-35 ceph02
+ceph-deploy osd create --data /dev/sds --block-db ceph-db-2/db-36 ceph02
+ceph-deploy osd create --data /dev/sdt --block-db ceph-db-2/db-37 ceph02
+ceph-deploy osd create --data /dev/sdv --block-db ceph-db-2/db-38 ceph02
+ceph-deploy osd create --data /dev/sdw --block-db ceph-db-2/db-39 ceph02
+
+ceph-deploy osd create --data /dev/sdc --block-db ceph-db-0/db-40 ceph03
+ceph-deploy osd create --data /dev/sdd --block-db ceph-db-0/db-41 ceph03
+ceph-deploy osd create --data /dev/sde --block-db ceph-db-0/db-42 ceph03
+ceph-deploy osd create --data /dev/sdf --block-db ceph-db-0/db-43 ceph03
+ceph-deploy osd create --data /dev/sdg --block-db ceph-db-0/db-44 ceph03
+ceph-deploy osd create --data /dev/sdh --block-db ceph-db-0/db-45 ceph03
+ceph-deploy osd create --data /dev/sdi --block-db ceph-db-1/db-46 ceph03
+ceph-deploy osd create --data /dev/sdj --block-db ceph-db-1/db-47 ceph03
+ceph-deploy osd create --data /dev/sdk --block-db ceph-db-1/db-48 ceph03
+ceph-deploy osd create --data /dev/sdl --block-db ceph-db-1/db-49 ceph03
+ceph-deploy osd create --data /dev/sdm --block-db ceph-db-1/db-50 ceph03
+ceph-deploy osd create --data /dev/sdn --block-db ceph-db-1/db-51 ceph03
+ceph-deploy osd create --data /dev/sdo --block-db ceph-db-1/db-52 ceph03
+ceph-deploy osd create --data /dev/sdp --block-db ceph-db-2/db-53 ceph03
+ceph-deploy osd create --data /dev/sdq --block-db ceph-db-2/db-54 ceph03
+ceph-deploy osd create --data /dev/sdr --block-db ceph-db-2/db-55 ceph03
+ceph-deploy osd create --data /dev/sds --block-db ceph-db-2/db-56 ceph03
+ceph-deploy osd create --data /dev/sdt --block-db ceph-db-2/db-57 ceph03
+ceph-deploy osd create --data /dev/sdv --block-db ceph-db-2/db-58 ceph03
+ceph-deploy osd create --data /dev/sdw --block-db ceph-db-2/db-59 ceph03
+
